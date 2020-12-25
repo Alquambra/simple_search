@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link type="text/css" href="{{ url_for('static', filename='css/results_page.css')}}" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form class="search-form" action="/" method="get" autocomplete="off">
+        <input class="search-field" type="text" placeholder="Введите ваш запрос" name="q" value="">
+        <input class="search-btn" type="submit" value="Найти!">
+    </form>
+
+    <ol>
+        {% if docs %}
+        {% for doc in docs %}
+        <li class="doc">
+            <div class="one-result">
+                <a class="main-text" href="{{ url_for('document_page', id=doc.id) }}">{{ doc.text|truncate(100) }}</a>
+                <div class="date-and-rubric">
+                    <p class="date">{{ doc.created_date }}</p>
+                    <p class="rubric">{{ doc.rubrics }}</p>
+                </div>
+            </div>
+        </li>
+        {% endfor %}
+        {% else %}
+        <p>По данному запросу ничего не найдено.</p>
+        {% endif %}
+    </ol>
+<!--    <form action="/results" class="change_page" method="get">-->
+<!--        <a href="/results" name="back"><<<назад</a>-->
+<!--        <a href="/results" name="next">вперед>>></a>-->
+<!--    </form>-->
+</body>
+</html>

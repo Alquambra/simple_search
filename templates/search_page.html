@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link type="text/css" href="{{ url_for('static', filename='css/search_page.css')}}" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Search</title>
+</head>
+<body>
+    <div class="a">
+        <h1 class="main-caption">Найдется все!</h1>
+        <form class="search-form" action="/" method="get" autocomplete="off">
+            <input class="search-field" type="text" placeholder="Введите ваш запрос" name="q" value=""><!--
+            --><input class="search-btn" type="submit" value="Найти!">
+        </form>
+    </div>
+</body>
+</html>

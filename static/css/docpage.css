@@ -1,0 +1,38 @@
+body {
+    margin: 40px;
+}
+
+.box {
+    min-height: 100px;
+    width: 800px;
+}
+
+.doctext {
+    font-size: 24px;
+}
+
+.form-delete, .link-main {
+    display: inline-block;
+}
+
+.delete-btn {
+    background-color: red;
+    border-radius: 5px;
+    border: 0;
+    color: white;
+    height: 40px;
+    width: 120px;
+}
+
+.tomain-btn {
+    background-color: green;
+    border-radius: 5px;
+    border: 0;
+    color: white;
+    height: 40px;
+    width: 120px;
+}
+
+.delete-btn:hover, .tomain-btn:hover {
+    opacity: 0.9;
+}
